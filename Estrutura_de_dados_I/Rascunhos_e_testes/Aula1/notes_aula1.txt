@@ -1,0 +1,23 @@
+Estruturas de dados homogêneas aceitam apenas um tipo de dado.
+    - Vetores / matrizes
+    - Estáticas
+    - Tamanho pré-definido
+    - Mesmo tipo de dados
+
+Estruturas heterogêneas aceitam vários tipos de dados.
+    - Registros / Structs
+    - Diferentes tipos de dados
+
+Ponteiros
+    - Indicam uma posição na memória principal
+
+Alocação de memória
+    - Toda vez que inicia um programa, a memória principal é alocada. E toda vez
+    que o programa é fechado, a memória principal é liberada para uso.
+    - Em programas menores, em que se abre ele, é usado e depois é fechado, como
+    o Word, a memória é alocada ao abri-lo, e é liberada após o uso. Quando o 
+    programa é contínuo como o sistema operacional, a memória alocada é sempre a
+    mesma, e só é liberada quando o computador é desligado.
+
+    
+
