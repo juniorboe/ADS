@@ -1,0 +1,121 @@
+Aula 1 - Tabelas e gráficos; Medidas descritivas - Unidades 1 e 2 do livro
+
+- Organizar dados em tabelas ou gráficos são leituras mais práticas e rápidas
+- Estrutura da tabela: 
+	Título - Informação que corresponde ao título da tabela.
+	Topo - Local de nome das colunas.
+	Corpo - Elementos que serão lidos, contém linhas, e nessas linhas
+		os dados são incluídos em células.
+	Rodapé - Informações da fonte e do autor.(sobrenome e ano de publicação)
+- Para construir a tabela:
+	1 passo: Coletar os dados.
+	2 passo: Colocar os dados em rol(ordem crescente).
+	3 passo: Construir a tabela e contar as frequências (repetições).
+	4 passo: Construir as colunas Fr(%), FAC e FRAC(%).
+	5 passo: Como garantia confira seus dados, principalmente a coluna frequência.
+
+- Para determinar o número de classes(k) da tabela, é necessário utilizar o critério de Sturges.
+	Critério de Sturges: k = 1 + 3,3 log n
+		Onde, n é o número de dados a serem observados.
+	Ex.: 50 observações.
+	k = 1 + 3,3 log50 => 6,6 => 7 classes.
+
+- Para determinar a ampitude total, AT = Xmaior - Xmenor
+	Ex.: dado maior = 1850; dado menor = 950
+		AT = Xmaior - Xmenor => 1850 - 950 = 900.
+
+- Para determinar a amplitude de cada classe, h = AT/k = (Xmaior-Xmenor)/k
+	Ex.: Seguindo o exemplo com os dados anteriores
+		h = 900/7 => 128,57
+			Obs.: Pode transformar em um número aproximado para facilitar o cálculo posterior.
+				Neste exemplo, ao invés de 128,57, pode ser 130.
+
+- Para determinar as classes e seus respectivos intervalos, deve iniciar o cálculo
+no menor dado da amostra, e somar com h até chagar ao maior dado observado.
+	Ex.: 
+	1 classe: 950 + 130 = de 950 até 1080 (não conta com o 1080)
+	2 classe: 1080 + 130 = de 1080 até 1210 (não conta com o 1210)
+	3 classe: 1210 + 130 = de 1210 até 1340 (não conta com o 1340)
+	4 classe: 1340 + 130 = de 1340 até 1470 (não conta com o 1470)
+	5 classe: 1470 + 130 = de 1470 até 1600 (não conta com o 1600)
+	6 classe: 1600 + 130 = de 1600 até 1730 (não conta com o 1730)
+	7 classe: 1730 + 130 = de 1730 até 1860 (o último dado deve comportar o último dado do rol de observações)
+
+- Por fim, para calcular a FREQUÊNCIA SIMPLES dos dados (Fi), deve calcular quantas observações se encaixam nas classes acima.
+	Ex. da aula.:
+	
+	|classe(i)|Concentração(ppb)|frequência(Fi)|
+	|    1    |   950 |- 1080   |	  12	   |
+	|    2    |  1080 |- 1210   |	   4	   |
+	|    3    |  1210 |- 1340   |	   8	   |
+	|    4    |  1340 |- 1470   |	   7	   |
+	|    5    |  1470 |- 1600   |	   5	   |
+	|    6    |  1600 |- 1730   |	   6	   |
+	|    7    |  1730 |- 1860   |	   8	   |
+	|         |      Total      |	  50	   |
+
+- Para calcular a FREQUÊNCIA RELATIVA (Fri): Fri = Fi/n, onde n é o número de dados observados.
+	Ao final, deve somar todas as Fri e o resultado deve ser 1,0.
+- Para calcular a FREQUËNCIA RELATIVA PERCENTUAL(Fri(%)), é necessário multiplicar a Fri por 100. Fri(%) = Fri x 100
+	Ex.:
+ 
+	|classe(i)|Concentração(ppb)|frequência(Fi)|Freq. Relativa(Fri)|Freq. Rel. Percent. (Fri(%))|
+	|    1    |   950 |- 1080   |	  12	   |	   0,24	       |	    24		    |	
+	|    2    |  1080 |- 1210   |	   4	   |	   0,08        |	     8		    |
+	|    3    |  1210 |- 1340   |	   8	   |       0,16	       |	    16		    |
+	|    4    |  1340 |- 1470   |	   7	   |	   0,14	       |	    14		    |
+	|    5    |  1470 |- 1600   |	   5	   |	   0,10	       |	    10		    |
+	|    6    |  1600 |- 1730   |	   6	   |	   0,12	       |	    12		    |
+	|    7    |  1730 |- 1860   |	   8	   |	   0,16	       |	    16		    |
+	|         |      Total      |	  50	   |	   1,0	       |	   100		    |
+
+- Para a Frequência acumulada: Fac = f1 + f2 + ... + fn
+- Para a frequência acumulada relativa: FRac = Fac / n 
+- Para a frequência acumulada relativa percentual: FRac(%) = 100 x (Fac/n)
+
+	Ex.:
+	
+	|classe(i)|Concentração(ppb)|frequência(Fi)|Freq. Relativa(Fri)|Freq. Rel. Percent. (Fri(%))|  Fac  |  FRac  | FRac(%) | 
+	|    1    |   950 |- 1080   |	  12	   |	   0,24	       |	    24		    |   12  |  0,24  |   24    |	
+	|    2    |  1080 |- 1210   |	   4	   |	   0,08        |	     8		    |   16  |  0,32  |   32    |
+	|    3    |  1210 |- 1340   |	   8	   |       0,16	       |	    16		    |   24  |  0,48  | 	 48    |
+	|    4    |  1340 |- 1470   |	   7	   |	   0,14	       |	    14		    |   31  |  0,62  |   62    |
+	|    5    |  1470 |- 1600   |	   5	   |	   0,10	       |	    10		    |   36  |  0,72  |   72    |
+	|    6    |  1600 |- 1730   |	   6	   |	   0,12	       |	    12		    |   42  |  0,84  |   84    |
+	|    7    |  1730 |- 1860   |	   8	   |	   0,16	       |	    16		    |   50  |  1,00  |   100   |
+	|         |      Total      |	  50	   |	   1,0	       |	   100		    |    -  |    -   |    -    |
+
+- Para o primeiro item da atividade 1, deve fazer uma tabela com o formato a seguir:
+	
+	Tabela - Concentração de gás metano. (Título)
+	|Concentração(ppb)|frequência(Fi)|Freq. Relativa(Fri)|Freq. Rel. Percent. (Fri(%))|  Fac  |  FRac  | FRac(%) | 
+	|   950 |- 1080   |	  12	 |	  0,24	     |	      24	          |   12  |  0,24  |   24    |	
+	|  1080 |- 1210   |	   4     |	  0,08       |	       8		  |   16  |  0,32  |   32    |
+	|  1210 |- 1340   |	   8     |        0,16	     |	      16		  |   24  |  0,48  |   48    |
+	|  1340 |- 1470   |	   7     |	  0,14       |	      14		  |   31  |  0,62  |   62    |
+	|  1470 |- 1600   |	   5     |        0,10       |	      10		  |   36  |  0,72  |   72    |
+	|  1600 |- 1730   |	   6     |        0,12       |	      12   	          |   42  |  0,84  |   84    |
+	|  1730 |- 1860   |	   8     |        0,16       |	      16		  |   50  |  1,00  |   100   |
+	|      Total      |	  50     |        1,0        |	     100		  |    -  |    -   |    -    |
+		Autor
+
+Medidas de posição (ou Medidas de tendência central)
+	São elas:
+	- Média aritmética: É um valor que procura resumir o conjunto de dados a apenas um valor. Porém, 
+		este valor é fortemente influênciado pelos valores extremos (outlier).
+
+	- Média harmônica;
+
+	- Moda: A moda corresponde ao valor que aparece com maior frequência na amostra.
+
+	- Média ponderada: É atribuido um peso para cada medida, e divide pela somatória dos pesos.
+
+	- Mediana: É um valor que divide os dados ao meio, e obtém um valor exatamente médio da amostra.
+	
+	- Média Geométrica.
+
+	PARA SABER AS FÓRMULAS, VIDE SLIDE DA AULA ONLINE.
+
+Se a média, moda e mediana forem iguais, é dito que os dados são SIMÉTRICOS. Senão, é dito que não existe simetria.
+
+ 

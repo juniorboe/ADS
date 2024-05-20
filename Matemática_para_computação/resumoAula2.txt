@@ -1,0 +1,19 @@
+Probabilidade expressa a possibilidade da ocorrência de um fenômeno através de números
+
+Experimento - Permite o observador fazer observações
+
+Evento - Resultado de um experimento
+Evento simples - Quando existe um resultado possível, ou seja, não é decomposto
+Evento composto - Quando existe mais de um resultado. Pode ser decomposto
+Espaço amostral - Determina todo o conjunto de possibilidades (Conjunto Universo)
+
+Probabilidade é um valor que varia de 0 e 1
+A soma das probabilidades de todos os resultados deve ser 1
+
+A fórmula da probabilidade é P(A) = n(A)/n(S) onde A é o evento, n(A) é o número dos possíveis resultados
+favoráveis a A, e n(S) é o número dos possíveis resultados do evento (espaço amostral).
+
+A fórmula da probabilidade condicional é P(A/B) = n(A intercessão B)/n(B), neste caso, lê-se a probabilidade de A, dado que B já ocorreu
+	Usa-se ela quando um evento depende da ocorrência do outro evento.
+A fórmula da regra da multiplicação para probabilidade é P(A intercess B) = P(A) * P(B), se houver mais eventos, segue o produto com todos eles.
+	Usa-se ela quando um evento não depende da ocorrência do outro evento.
