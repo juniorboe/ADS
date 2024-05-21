@@ -1,0 +1,41 @@
+Pilhas é uma estrutura na qual é empilhado dados, e na hora de serem
+utilizados, eles o são em ordem.
+    - LIFO (last in, first out)
+    - São usados em:
+        - Avaliação de expressões e Parsing sintático
+        - Algoritmos de Backtracking
+        - Gerenciamento de Memória em tempo de compilação
+        - Operações como desfazer e refazer em aplicações (ctrl + z)
+        - Controle de navegação em browsers
+        - Endereçamento de instruções em microprocessadores
+        - Análise de expressões aritméticas
+    - Utiliza-se push(<elemento a ser colcoado>) para colocar, e pop() para tirar o elemento
+
+Filas
+    - FIFO (first in, first out)
+    - São usadas em:
+        - Documentos enviados para impressão
+        - Troca de mensagens entre processos em Sistemas Operacionais
+        - Troca de mensagens entre computadores em uma rede
+    - Utiliza-se queue(<dado a ser enfileirado>), e dequeue() para desenfileirar
+
+Estrutura em Controle
+
+Pilha
+
+struct tpilha {
+    int dados[tamanho];
+    int <inicio>;
+    int <fim>;
+}
+
+Fila
+
+struct tfila {
+    int dados[tamanho];
+    int <inicio>;
+    int <fim>;
+}
+
+Amabas as estruturas são iguais, o que muda é como ela é manipulada.
+Ou seja, as funções a serem usadas para manipulá-las.
