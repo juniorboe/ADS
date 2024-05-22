@@ -1,0 +1,21 @@
+Listas dinâmicas
+    São como arrays, mas sem tamanho predefinido.
+    - Lembram as estruturas anteriores
+    - Mais versátil
+    - Pode-se interpretar uma lista dinâmica com filas e pilhas
+    - Mais dinâmica (melhor possibilidade para otimização de memória)
+    - Trabalha muito com nós.
+
+- A variável de uma lista aponta para o primeiro elemento dela.
+E cada elemento possui um ponteiro indicando o próximo elemento.
+Por isso, cada elemento é um nó de lista.
+
+- Para achar um elemento dentro de uma lista dinâmica,
+é necessário fazer um loop.
+
+Estrutura:
+
+struct no {
+    int dado;
+    struct no *proximo; //*proximo é uma struct recursiva de ponteiro que aponta para o nó posterior a ele
+};
