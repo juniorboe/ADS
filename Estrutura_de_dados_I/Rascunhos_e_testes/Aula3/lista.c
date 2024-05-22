@@ -2,91 +2,70 @@
 #include <stdlib.h>
 #include <time.h>
 
-//Definindo a estrutura da lista
-struct no {
+typedef struct no {
     int dado;
     struct no *proximo;
-};
+} no;
 
-//Definindo variaveis
-typedef struct no no;
-typedef no *ptr_no;
+//Definindo variáveis
+typedef struct no *ptr_no;
 ptr_no lista;
 int op;
 
-//Prototipacao
-void mostrar_menu();
-void selecao_menu(int op);
-void mostrar_no();
-void add_elemento(ptr_no lista);
+//prototipação
+void menu_mostrar();
+void menu_selecionar(int op);
+void lista_inserir(ptr_no lista);
+void lista_mostrar(ptr_no lista);
 
-//Funcao principal
+//Função principal
 int main() {
-    //Inicalizando maquina de numeros randomicos
-    srand(time(NULL));
-
     op = 1;
-    //Criando o primeiro no de lista
+
     lista = (ptr_no)malloc(sizeof(no));
     lista->dado = 0;
     lista->proximo = NULL;
 
-    //Criando loop de execucao do programa
-    while(op != 0){
-        system("cls || clear");
-        //Mostrando menu
-        mostrar_menu();
+    while (op != 0) {
+        system("cls");
+        menu_mostrar();
         scanf("%d", &op);
-        //Captando selecao do menu
-        selecao_menu(op);
+        menu_selecionar(op);
     }
-
     system("Pause");
     return 0;
 }
 
-void mostrar_no(ptr_no lista) {
-    system("cls || clear");
-    while(1) {
-        printf("[");
-        printf(" %d ", lista->dado);
-        printf("]");
-        if (lista->proximo == NULL) {
-            break;
-        }
-    }
-}
-
-
-void mostrar_menu() {
-    mostrar_no(lista);
-    printf("\n");
-    printf("Escolha uma das opcoes abaixo: \n");
+void menu_mostrar() {
+    lista_mostrar(lista);
+    printf("\n\nEscolha uma opcao:\n");
     printf("1- Adicionar elemento.\n");
-    printf("2- Excluir elemento.\n\n");
-    printf("0- Sair.\n\n");
+    printf("0- Sair.\n");
 }
 
-void selecao_menu(int op) {
-    switch(op) {
+void lista_mostrar(ptr_no lista) {
+    system("cls");
+    while (lista->proximo != NULL) {
+        printf("%d, ", lista->dado);
+        lista = lista->proximo;
+    }
+    printf("%d", lista->dado);
+}
+
+void menu_selecionar(int op) {
+    switch (op) {
         case 1:
-            add_elemento(lista);
-        break;
-//        case 2:
-//            rm_elemento();
-//        break;
-        case 0:
-            printf("O programa esta sendo fechado.\n");
+            lista_inserir(lista);
         break;
     }
 }
 
-void add_elemento(ptr_no lista){
+void lista_inserir(ptr_no lista) {
     while (lista->proximo != NULL) {
         lista = lista->proximo;
     }
-    lista->proximo = (ptr_no) malloc(sizeof(no));
+    lista->proximo = (ptr_no)malloc(sizeof(no));
     lista = lista->proximo;
-    lista->dado = rand()%100;
+    lista->dado = 1;
     lista->proximo = NULL;
 }
