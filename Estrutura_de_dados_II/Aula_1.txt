@@ -1,0 +1,6 @@
+Árvores são estruturas ordenadas, que seguem uma hierarquia.
+ - São formadas por dados, que são chamados de nós.
+ - O nó inicial é chamado de raíz.
+ - Normalmente, são criados dois nós seguintes ao nó raíz, que são chamados sub árvores.
+ - É importante balancear a árvore para que o acesso aos dados seja feito da maneira mais otimizada.
+ 
